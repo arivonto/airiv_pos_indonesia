@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_pos_config_form_indonesia" model="ir.ui.view">
+            <field name="name">pos.config.form.indonesia</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="inside">
+                    <h2 class="mt-4">Indonesian Retail &amp; Thermal Printing</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Thermal Receipt Formats</span>
+                                <div class="text-muted">Configure 58mm or 80mm ESC/POS layout and DJP Coretax metadata</div>
+                                <div class="content-group mt-2">
+                                    <field name="l10n_id_receipt_paper_width" class="oe_inline"/>
+                                    <field name="l10n_id_store_npwp" placeholder="NPWP / NIK 16 Digit Toko"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="l10n_id_show_tax_breakdown"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="l10n_id_show_tax_breakdown" string="Statutory PPN 12% Breakdown"/>
+                                <div class="text-muted">Display DPP and PPN 12% calculation on thermal receipts</div>
+                                <div class="mt-2">
+                                    <field name="l10n_id_auto_send_wa_receipt"/>
+                                    <label for="l10n_id_auto_send_wa_receipt" string="Enable WhatsApp Digital Receipts"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

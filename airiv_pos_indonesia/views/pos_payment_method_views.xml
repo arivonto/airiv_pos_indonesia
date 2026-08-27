@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_pos_payment_method_form_indonesia" model="ir.ui.view">
+            <field name="name">pos.payment.method.form.indonesia</field>
+            <field name="model">pos.payment.method</field>
+            <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='journal_id']" position="after">
+                    <field name="l10n_id_payment_type"/>
+                    <field name="l10n_id_qris_merchant_id" invisible="l10n_id_payment_type not in ('qris_dynamic', 'qris_static')"/>
+                    <field name="l10n_id_qris_static_payload" invisible="l10n_id_payment_type != 'qris_static'"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

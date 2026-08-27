@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Dedicated Action for POS Payment Methods -->
+        <record id="action_pos_payment_method_indonesia" model="ir.actions.act_window">
+            <field name="name">Payment Methods (QRIS &amp; Indonesian Rails)</field>
+            <field name="res_model">pos.payment.method</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <menuitem id="menu_pos_indonesia_root"
+                  name="Indonesian POS"
+                  parent="point_of_sale.menu_point_root"
+                  sequence="25"/>
+
+        <menuitem id="menu_pos_indonesia_payment_methods"
+                  name="QRIS &amp; Payment Rails"
+                  parent="menu_pos_indonesia_root"
+                  action="action_pos_payment_method_indonesia"
+                  sequence="1"/>
+    </data>
+</odoo>

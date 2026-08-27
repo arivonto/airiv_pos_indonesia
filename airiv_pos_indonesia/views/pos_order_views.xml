@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_pos_pos_form_indonesia" model="ir.ui.view">
+            <field name="name">pos.order.form.indonesia</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="action_send_whatsapp_receipt" string="Send WhatsApp Receipt" type="object" class="btn-secondary" invisible="state not in ('paid', 'done', 'invoiced')"/>
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="l10n_id_wa_receipt_status" widget="badge"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
