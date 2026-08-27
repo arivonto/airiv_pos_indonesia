@@ -30,9 +30,25 @@ A modern, high-speed Indonesian Point of Sale (POS) retail and F&B engine built 
 
 The complete POS workflow was verified under live Odoo 18.0 Community conditions:
 
-1. **POS Configuration**: Main Store register configured with 80mm thermal receipt width, PPN 12% tax summary, and Dynamic QRIS payment rails.
-2. **Order Execution**: POS Order `POS/2026/00001` processed for 2 items totaling **Rp 112.000,00** (DPP: Rp 100.000, PPN 12%: Rp 12.000).
-3. **WhatsApp Struk Dispatch**: Dispatched itemized digital receipt to customer `0812-3456-7890`, verified in the audit logger.
+1. **POS Configuration**: Store register configured with 80mm thermal receipt width, PPN 12% tax summary, and Dynamic QRIS payment rails.
+2. **Order Execution**: POS Order processed for 2 units of `Kopi Arabika Premium 250g` totaling **Rp 112.000,00** (DPP: Rp 100.000,00, PPN 12%: Rp 12.000,00).
+3. **WhatsApp Struk Dispatch**: Dispatched itemized digital receipt to customer `0812-3456-7890`, verified with delivery status `sent`.
+
+---
+
+## Installation & Configuration Guide
+
+1. **Deploy Module**:
+   Place `airiv_pos_indonesia` inside your Odoo `custom_addons` directory.
+
+2. **Activate Module**:
+   * Navigate to **Apps > Update Apps List**.
+   * Search for `Indonesia POS Retail & F&B Engine` and click **Activate**.
+
+3. **Configure Thermal Printing & QRIS**:
+   * Open **Point of Sale > Configuration > Settings**.
+   * Select your preferred thermal paper width (58mm or 80mm) and input your store NPWP 16/NIK.
+   * Enable QRIS Dynamic and WhatsApp digital receipts.
 
 ---
 

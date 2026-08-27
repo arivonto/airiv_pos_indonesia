@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- Dedicated Action for POS Payment Methods -->
         <record id="action_pos_payment_method_indonesia" model="ir.actions.act_window">
             <field name="name">Payment Methods (QRIS &amp; Indonesian Rails)</field>
             <field name="res_model">pos.payment.method</field>
