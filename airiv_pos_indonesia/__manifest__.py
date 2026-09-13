@@ -12,7 +12,7 @@ Indonesia Point of Sale (POS) Localization for Odoo 18 Community.
 - Pre-configured Indonesian Payment Methods (QRIS, Tunai IDR, Transfer BCA/Mandiri/BRI, EDC Debit)
 - Zero External Server Overhead - 100% Odoo 18 Community Native
 """,
-    'author': 'Riv Cloud Management',
+    'author': 'AIRIV',
     'website': 'https://airiv.id',
     'url': 'https://github.com/arivonto/airiv_pos_indonesia/blob/18.0/static/description/index.html',
     'license': 'LGPL-3',
