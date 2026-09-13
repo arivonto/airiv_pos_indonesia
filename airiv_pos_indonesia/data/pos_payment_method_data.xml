@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <data>
     <data noupdate="1">
         <record id="pos_payment_method_qris_dynamic" model="pos.payment.method">
             <field name="name">QRIS Dynamic (Gojek / OVO / Dana / BCA)</field>
@@ -15,5 +16,6 @@
             <field name="name">Mesin EDC Debit / Kredit</field>
             <field name="l10n_id_payment_type">edc</field>
         </record>
+    </data>
     </data>
 </odoo>
